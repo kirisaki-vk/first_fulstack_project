@@ -1,0 +1,11 @@
+{
+  "name": "client-frontend-e-book",
+  "version": "1.0.0",
+  "description": "Front end du web app E-book",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "kirisaki-vk",
+  "license": "ISC"
+}
