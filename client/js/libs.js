@@ -1,3 +1,5 @@
+//Inject the data from the database into the HTML
+
 function injectInto(container, data) {
     data.forEach((element) => {
         container.innerHTML += `
@@ -19,6 +21,7 @@ function injectInto(container, data) {
     })
 }
 
+// Takes the strange date incoming from the database and format it to a readable one
 function dateFormat (date) {
   return date.split('T')[0].split('-').reverse().join('/')
 }
