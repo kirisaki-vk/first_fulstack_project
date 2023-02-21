@@ -8,7 +8,10 @@ function fetchResource(resource) {
         fetch(path)
             .then(res => res.json())
             .then(res => resolve(res))
-            .catch(error => reject(error));
+            .catch(error => {
+                errorCard('There was an error by getting the ressource, please try later', bookContainer);
+                reject(error);
+            });
     });
 }
 
