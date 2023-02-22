@@ -1,3 +1,5 @@
+let PORT = 3000;
+
 //Inject the data from the database into the HTML
 
 function injectInto(container, data) {
@@ -6,7 +8,7 @@ function injectInto(container, data) {
       <div class="card mb-3 limit-width">
             <div class="row g-0">
               <div class="col-md-4">
-                <img src="${element.cover}" class="img-fluid rounded-start" alt="Image not found">
+                <img src="${window.location.protocol}//${window.location.hostname}:${PORT}/${element.cover}" class="img-fluid rounded-start" alt="Image not found">
               </div>
               <div class="col-md-8">
                 <div class="card-body">
@@ -39,3 +41,5 @@ function errorCard(msg, container){
   </div>
   `
 }
+
+// Funtcion to post a book to the backend

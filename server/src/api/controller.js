@@ -14,16 +14,11 @@ const getAuthors = (req, res) => {
 }
 
 const addBook = (req, res) => {
-    const { title, author, description } = req.body;
-
-    pool.query(queries.addBook, [title, author.name, description], (error, result) => {
-        if (error) throw error;
-        res.status(201).send(`Book added with ID: ${result.insertId}`);
-    });
-    pool.query(queries.addAuthor, [author.name, author.profile_pic])
+    res.send(req.body)
 }
 
 module.exports = {
     getBooks,
     getAuthors,
+    addBook,
 }
