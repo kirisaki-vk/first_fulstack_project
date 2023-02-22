@@ -1,4 +1,5 @@
--- Active: 1677044886174@@127.0.0.1@5432@ebook@public
+CREATE DATABASE ebook;
+\c ebook
 
 CREATE Table author(
     id_auth serial PRIMARY KEY,
